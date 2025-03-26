@@ -1,0 +1,4 @@
+In the following C-code snippet, and given the location and precondition
+marked with (PRE), can the post-condition (POST) ever be violated?
+
+The code snippet is as follows:

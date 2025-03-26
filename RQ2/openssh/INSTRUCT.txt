@@ -1,0 +1,3 @@
+The following C snippet is a slice originating from a large project's crash. A CRASH LOCATION comment indicates the location of the crash. Can you tell me the reason for the crash?
+
+The code snippet is as follows:

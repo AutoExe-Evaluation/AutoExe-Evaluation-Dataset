@@ -1,0 +1,15 @@
+def main():
+    # PRE:
+    # Input Format:
+    # The first line contains a single integer t (1 \leq t \leq 100)  — the number of test cases. The description of the test cases follows.The only line of each test case contains a single integer n (2 \leq n \leq 10^6).
+    # POST:
+    # Program Description:
+    # Let's consider all integers in the range from 1 to n (inclusive).Among all pairs of distinct integers in this range, find the maximum possible greatest common divisor of integers in pair. Formally, find the maximum value of \mathrm{gcd}(a, b), where 1 \leq a < b \leq n.The greatest common divisor, \mathrm{gcd}(a, b), of two positive integers a and b is the biggest integer that is a divisor of both a and b.
+    # Output Format:
+    # For each test case, output the maximum value of \mathrm{gcd}(a, b) among all 1 \leq a < b \leq n.
+    t = int(input())
+    
+    for _ in range(t):
+          n = int(input())
+          print(n//2)
+    

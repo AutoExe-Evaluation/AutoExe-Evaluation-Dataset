@@ -1,0 +1,10 @@
+def cycpattern_check(a , b):
+    l = len(b)
+    pat = b + b
+    _result = False
+    for i in range(len(a) - l + 1):
+        for j in range(l + 1):
+            if a[i:i+l] == pat[j:j+l]:
+                _result = True
+
+    assert func(_result)  # POST: func is equivalent to: You are given 2 words. You need to return True if the second word or any of its rotations is a substring in the first word cycpattern_check("abcd","abd") => False cycpattern_check("hello","ell") => True cycpattern_check("whassup","psus") => False cycpattern_check("abab","baa") => True cycpattern_check("efef","eeff") => False cycpattern_check("himenss","simen") => True

@@ -1,0 +1,32 @@
+def main():
+    # PRE:
+    # Input Format:
+    # The first line of the input contains one integer t (1 \le t \le 2 \cdot 10^4) — the number of test cases. Then t test cases follow.The only line of the test case contains three integers x, y, and z (1 \le x, y, z \le 10^9).
+    # POST:
+    # Program Description:
+    # You are given three positive (i.e. strictly greater than zero) integers x, y and z.Your task is to find positive integers a, b and c such that x = \max(a, b), y = \max(a, c) and z = \max(b, c), or determine that it is impossible to find such a, b and c.You have to answer t independent test cases. Print required a, b and c in any (arbitrary) order.
+    # Output Format:
+    # For each test case, print the answer:  "NO" in the only line of the output if a solution doesn't exist;  or "YES" in the first line and any valid triple of positive integers a, b and c (1 \le a, b, c \le 10^9) in the second line. You can print a, b and c in any order.
+    t = int(input())
+    yes = 'YES'
+    no = 'NO'
+    
+    for _ in range(t):
+          x, y, z = map(int, input().split())
+          if x == y and x >= z:
+                print(yes)
+                a = x
+                b = c = z
+                print(a, b, c)
+          elif x == z and x >= y:
+                print(yes)
+                a = x
+                b = c = y
+                print(a, b, c)
+          elif y == z and y >= x:
+                print(yes)
+                a = y
+                b = c = x
+                print(a, b, c)
+          else:
+                print(no)

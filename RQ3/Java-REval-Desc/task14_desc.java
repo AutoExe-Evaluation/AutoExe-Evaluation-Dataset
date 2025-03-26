@@ -1,0 +1,22 @@
+public class FizzBuzz {
+    public static void fizz_buzz(int n) {
+        int[] ns = new int[n];
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (i % 11 == 0 || i % 13 == 0) {
+                ns[count++] = i;
+            }
+        }
+        StringBuilder s = new StringBuilder();
+        for (int i = 0; i < count; i++) {
+            s.append(ns[i]);
+        }
+        int ans = 0;
+        for (char c : s.toString().toCharArray()) {
+            ans += (c == '7') ? 1 : 0;
+        }
+        int _result = ans;
+
+        assert func(_result);  // POST: func is equivalent to: Return the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13. >>> fizz_buzz(50) 0 >>> fizz_buzz(78) 2 >>> fizz_buzz(79) 3
+    }
+}

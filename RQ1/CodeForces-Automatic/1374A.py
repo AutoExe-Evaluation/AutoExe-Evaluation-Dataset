@@ -1,0 +1,20 @@
+def main():
+    # PRE:
+    # Input Format:
+    # The first line of the input contains one integer t (1 \le t \le 5 \cdot 10^4) — the number of test cases. The next t lines contain test cases.The only line of the test case contains three integers x, y and n (2 \le x \le 10^9;~ 0 \le y < x;~ y \le n \le 10^9).It can be shown that such k always exists under the given constraints.
+    # POST:
+    # Program Description:
+    # You are given three integers x, y and n. Your task is to find the maximum integer k such that 0 \le k \le n that k \bmod x = y, where \bmod is modulo operation. Many programming languages use percent operator % to implement it.In other words, with given x, y and n you need to find the maximum possible integer from 0 to n that has the remainder y modulo x.You have to answer t independent test cases. It is guaranteed that such k exists for each test case.
+    # Output Format:
+    # For each test case, print the answer — maximum non-negative integer k such that 0 \le k \le n and k \bmod x = y. It is guaranteed that the answer always exists.
+    t = int(input())
+    
+    for _ in range(t):
+          x, y, n = map(int, input().split())
+          q = n // x
+          mode = n % x
+          ans = x * q + y 
+          if ans <= n:
+                print(ans)
+          else:
+                print(x * (q - 1) + y)
